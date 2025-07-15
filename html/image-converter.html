@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor de Imágenes - Vercon</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../css/image.css">
+</head>
+<body>
+  <!-- Fondo de partículas -->
+  <div id="particles-js"></div>
+  <header>
+    <h1>Conversor de Imágenes</h1>
+    <!-- Nav con enlace a Inicio, desplegable para Conversores y Contáctanos -->
+    <nav>
+      <a href="../index.html">Inicio</a>
+      <div class="dropdown" style="display:inline-block; position:relative;">
+        <a href="#" style="padding: 0.5em 1em; display:block;">Conversores ▾</a>
+        <ul style="display:none; list-style: none; margin:0; padding:0; position:absolute; background:#000; border:1px solid #8e44ad; border-radius:5px; z-index:2;">
+          <li><a href="image-converter.html" style="padding:0.5em 1em; display:block;">Imágenes</a></li>
+          <li><a href="document-converter.html" style="padding:0.5em 1em; display:block;">Documentos</a></li>
+          <li><a href="csv-manager.html" style="padding:0.5em 1em; display:block;">CSV</a></li>
+          <li><a href="audio-converter.html" style="padding:0.5em 1em; display:block;">Audio</a></li>
+          <li><a href="video-converter.html" style="padding:0.5em 1em; display:block;">Video</a></li>
+          <li><a href="pdf-tools.html" style="padding:0.5em 1em; display:block;">PDF</a></li>
+          <li><a href="ocr-tool.html" style="padding:0.5em 1em; display:block;">OCR</a></li>
+          <li><a href="qr-generator.html" style="padding:0.5em 1em; display:block;">QR</a></li>
+          <li><a href="barcode-generator.html" style="padding:0.5em 1em; display:block;">Barras</a></li>
+          <li><a href="emoji-generator.html" style="padding:0.5em 1em; display:block;">Emojis</a></li>
+        </ul>
+      </div>
+      <a href="../contact.html" style="padding: 0.5em 1em; display:inline-block;">Contáctanos</a>
+    </nav>
+  </header>
+  <main>
+    <div class="converter-section">
+      <h2>Sube tu imagen</h2>
+      <!-- Label para seleccionar archivo -->
+      <label for="image-input" class="upload-label">Seleccionar Archivo</label>
+      <!-- Input file oculto -->
+      <input type="file" id="image-input" accept="image/*">
+      <!-- Span para mostrar el nombre del archivo seleccionado -->
+      <span id="file-name"></span>
+      <!-- Contenedor para mostrar la imagen original y la convertida -->
+      <div class="preview-container">
+        <div class="preview">
+          <img id="original-image" src="" alt="Imagen original" style="display:none;">
+        </div>
+        <div class="preview">
+          <canvas id="canvas"></canvas>
+        </div>
+      </div>
+      <!-- Botón de conversión -->
+      <button class="card-title" id="convert-image">Convertir Imagen</button>
+      <!-- Selector para elegir formato de exportación -->
+      <select id="export-format" class="export-select">
+        <option value="png" selected>Exportar como PNG</option>
+        <option value="jpg">Exportar como JPG</option>
+        <option value="jpeg">Exportar como JPEG</option>
+        <option value="gif">Exportar como GIF</option>
+        <option value="webp">Exportar como WEBP</option>
+        <option value="bmp">Exportar como BMP</option>
+        <option value="ico">Exportar como ICO</option>
+        <option value="svg">Exportar como SVG</option>
+        <option value="tiff">Exportar como TIFF</option>
+      </select>
+      <br>
+      <!-- Botón de descarga -->
+      <a id="download-image" download="converted.png">Descargar Imagen</a>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 Vercon - Todos los derechos reservados.</p>
+  </footer>
+  
+  <!-- Particles.js desde CDN -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="../srcipt.js"></script>
+  <script src="../js/image.js"></script>
+</body>
+</html>
